@@ -7,11 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentComponent implements OnInit {
   public name = "prince";
-
+receiveMessage:string;
+messageSend:string='';
   constructor() { }
 
   ngOnInit() {
-    
+  }
+
+sendMessage(message:string){
+  this.messageSend=message;
+}
+
+  getMessage(message:string){
+    this.receiveMessage=message;
   }
 
 }

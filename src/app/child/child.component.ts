@@ -8,11 +8,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ChildComponent implements OnInit {
 
   @Input() public parentData;
-  @Output() public childEvent=new EventEmitter<string>();
-
-  sendMessage(message:string){
-this.message
-  }
+  @Output()  childEvent=new EventEmitter<string>();
+messageToParent(message:string){
+  this.childEvent.emit(message);
+}
 
   constructor() { }
 
