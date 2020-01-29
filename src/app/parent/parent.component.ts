@@ -6,20 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
-  public name = "prince";
-receiveMessage:string;
+  // public name = "prince";
+receiveMessageFromChild:string;
 messageSend:string='';
   constructor() { }
 
   ngOnInit() {
   }
 
-sendMessage(message:string){
+sendMessageToChild(message:string){
   this.messageSend=message;
 }
 
   getMessage(message:string){
-    this.receiveMessage=message;
+    this.receiveMessageFromChild=message;
   }
 
 }
